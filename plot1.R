@@ -18,8 +18,7 @@ d2 <- subset(d, Date=="1/2/2007"|Date=="2/2/2007")
 d2[d2=="?"] <- NA
 d3 <- na.omit(d2)
 
-hist(as.numeric(d3$Global_active_power),col="red",main="Global Active Power",xlab="Global Active Power")
-
+hist(as.numeric(as.character(d3$Global_active_power)),col="red",main="Global Active Power",xlab="Global Active Power")
 dev.copy(png,file="plot1.png")
 
 dev.off()
